@@ -29,7 +29,9 @@
   "dependencies": {
     "@mantine/core": "^6.0.21",
     "@mantine/notifications": "^6.0.21",
+    "@medplum/mock": "^3.0.10",
     "@medplum/react": "^2.2.10",
+    "@tabler/icons-react": "^3.1.0",
     "next": "^14.0.4",
     "node-mocks-http": "^1.14.1",
     "react": "^18.2.0",

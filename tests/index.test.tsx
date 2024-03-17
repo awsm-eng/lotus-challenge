@@ -1,8 +1,21 @@
-// import { createMocks, RequestMethod } from 'node-mocks-http';
-// import type { NextApiRequest, NextApiResponse } from 'next';
-// import page from '../pages/index';
+import '@testing-library/jest-dom';
+import { render } from "@testing-library/react";
+import IndexPage from "../pages";
 
 describe('/pages/', () => {
-  test.todo('Page renders');
-  test.todo('Link to patient present');
+  test('should render Home Page', async () => {
+    const wrapper = render(
+      <IndexPage />
+    );
+
+    expect(await wrapper.findByText('Welcome to Lotus AI')).toBeInTheDocument();
+  });
+
+  test('should render Link to patient page', async () => {
+    const wrapper = render(
+      <IndexPage />
+    );
+
+    expect(wrapper.getByRole('link', { name: 'Patient Summary' })).toBeInTheDocument();
+  });
 });
